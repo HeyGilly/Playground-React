@@ -6,14 +6,37 @@
     <!-- React CDN -->
     <script src="https://unpkg.com/react@17/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@17/umd/react-dom.development.js" crossorigin></script>
+    <!-- Babel CDN -->
+    <!-- You do not want to use this in production,  -->
+    <!--  Instead, you should use a build system running on Node.js, such as Webpack, Rollup, or Parcel, to transpile your JS ahead of time.  -->
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
     <!-- Page Title-->
     <title>React ⚛️ Playground</title>
 </head>
 <body>
 
-
-    <h1>Getting Started with React</h1>
-
+    <!--Where we are going to add our React -->
+    <div id="root"></div>
 
 </body>
+
+<script type="text/babel">
+    let robot = "🤖";
+    let moon = "🌕";
+    let cowboy = "🤠";
+    let message = "react is fun!"
+    ReactDOM.render(
+        <ul>
+            <li>{robot}</li>
+            <li>{moon}</li>
+            <li>{cowboy}</li>
+            <li>{message.toUpperCase()}</li>
+            <li>{message.length}</li>
+        </ul>,
+        document.getElementById("root")
+    );
+</script>
+
+
+
 </html>
